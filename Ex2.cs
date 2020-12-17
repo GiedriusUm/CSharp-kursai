@@ -8,9 +8,8 @@ namespace Excercises
        static void Main(string[] args)
         {
             Console.WriteLine("Enter Month number:");
-            Console.Write(DateTimeFormatInfo.CurrentInfo.GetMonthName(Int32.Parse(Console.ReadLine())));
+            DateTimeFormatInfo dtfi = CultureInfo.GetCultureInfo("en-US").DateTimeFormat;
+            Console.Write(dtfi.GetMonthName(Int32.Parse(Console.ReadLine())));
         }
     }
 }
-
-
